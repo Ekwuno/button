@@ -30,7 +30,6 @@ interface NativeButtonProps extends Omit<React.ButtonHTMLAttributes<HTMLButtonEl
 type ButtonProps = AnchorButtonProps | NativeButtonProps;
 
 
-
 export const Button = ({
   ariaLabel,
   disabled = false,
@@ -62,7 +61,7 @@ export const Button = ({
 
   if (iconLeft) {
     contents.push(
-      <span className='btn-icon-left'>
+      <span >
         {typeof iconLeft === 'string' ? <img src={iconLeft} alt='' /> : iconLeft}
       </span>
     );
@@ -72,7 +71,7 @@ export const Button = ({
 
   if (iconRight) {
     contents.push(
-      <span className='btn-icon-right'>
+      <span >
         {typeof iconRight === 'string' ? <img src={iconRight} alt='' /> : iconRight}
       </span>
     );
